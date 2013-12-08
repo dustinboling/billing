@@ -13,4 +13,13 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require gumby
+//= require ui/gumby.checkbox
+//= require ui/gumby.fixed
+//= require ui/gumby.radiobtn
+//= require ui/gumby.retina
+//= require ui/gumby.skiplink
+//= require ui/gumby.tabs
+//= require ui/gumby.toggleswitch
+//= require ui/jquery.validation
 //= require_tree .
