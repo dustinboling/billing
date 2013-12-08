@@ -4,40 +4,42 @@
 		%title Account Dashboard | Dustin Boling Associates
 		= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
 		= javascript_include_tag "application", "data-turbolinks-track" => true
-		= javascript_include_tag :modernizr
 		= csrf_meta_tags
 
 	%body
 
-		.row.navbar
-			%a.toggle{:href=>"#", :gumby => {:trigger => "#nav1 > ul"}}
-				%i.icon-menu
+		.navbar
+			.row
+				%a.toggle{:href=>"#", :gumby => {:trigger => "#nav1 > ul"}}
+					%i.icon-menu
 
-			%h1.four.columns.logo
-				%a{:href=>"#"}DBA
+				%h1.four.columns.logo
+					%a{:href=> root_url }
+						= image_tag "dustin-boling-associates-logo.png"
 
-			%ul.eight.columns
-				%li
-					%a{:href=>"#"}Features
-				%li
-					%a{:href=>"#"}Documentation
-					.dropdown
-						%ul
-							%li
-								%a{:href=>"#"}The Grid
-							%li
-								%a{:href=>"#"}UI Kit
-							%li
-								%a{:href=>"#"}Sass
-							%li
-								%a{:href=>"#"}JavaScript
-							%li
-								%a{:href=>"#"}Demo
-				%li
+
+				%ul.eight.columns
 					- if user_signed_in?
-						= link_to 'Logout', destroy_user_session_path, :method => :delete
+						%li
+							%a{:href=>"/subscriptions/"}Subscriptions
+						
+						%li
+							%a{:href=>"/invoices/"}Billing History
+						%li
+							%a{:href=>"#"}My Account
+							.dropdown
+								%ul
+									%li
+										= link_to "Account Settings", edit_user_registration_path
+									%li
+										%a{:href=>"/cards/"}My Credit Cards
+						%li
+							= link_to 'Logout', destroy_user_session_path, :method => :delete
+					
 					- else
-						= link_to 'Login', new_user_session_path
+						%li
+							= link_to 'Sign in', new_user_session_path
+		
 		.row
 			= yield
 

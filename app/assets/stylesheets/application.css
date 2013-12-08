@@ -12,3 +12,8 @@
  *= require gumby
  *= require_tree .
  */
+
+.logo img {
+	position: relative;
+	top: -17px;
+}

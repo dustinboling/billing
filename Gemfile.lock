@@ -159,6 +159,7 @@ DEPENDENCIES
   haml-rails
   jbuilder (~> 1.2)
   jquery-rails
+  modernizr-rails
   pg
   rails (= 4.0.2)
   rspec-rails

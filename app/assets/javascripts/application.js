@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require modernizr
 //= require gumby
 //= require ui/gumby.checkbox
 //= require ui/gumby.fixed

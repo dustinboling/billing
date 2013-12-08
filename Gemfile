@@ -13,6 +13,9 @@ gem 'sass-rails', '~> 4.0.0'
 # Use HAML instead of ERB
 gem 'haml-rails'
 
+# Required by Gumby framework
+gem 'modernizr-rails'
+
 # Use Gumby framework for UI
 gem 'gumby-framework'
 
