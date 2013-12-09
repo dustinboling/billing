@@ -1,0 +1,31 @@
+%h1 Listing plans
+
+%table
+  %tr
+    %th Stripe
+    %th Name
+    %th Description
+    %th Amount
+    %th Interval
+    %th Interval count
+    %th Trial period days
+    %th
+    %th
+    %th
+
+  - @plans.each do |plan|
+    %tr
+      %td= plan.stripe_id
+      %td= plan.name
+      %td= plan.description
+      %td= plan.amount
+      %td= plan.interval
+      %td= plan.interval_count
+      %td= plan.trial_period_days
+      %td= link_to 'Show', plan
+      %td= link_to 'Edit', edit_plan_path(plan)
+      %td= link_to 'Destroy', plan, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Plan', new_plan_path

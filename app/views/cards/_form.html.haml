@@ -1,0 +1,49 @@
+= form_for @card do |f|
+  - if @card.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@card.errors.count, "error")} prohibited this card from being saved:"
+      %ul
+        - @card.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :stripe_id
+    = f.text_field :stripe_id
+  .field
+    = f.label :last4
+    = f.text_field :last4
+  .field
+    = f.label :type
+    = f.text_field :type
+  .field
+    = f.label :exp_month
+    = f.number_field :exp_month
+  .field
+    = f.label :exp_year
+    = f.number_field :exp_year
+  .field
+    = f.label :fingerprint
+    = f.text_field :fingerprint
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :address_line1
+    = f.text_field :address_line1
+  .field
+    = f.label :address_line2
+    = f.text_field :address_line2
+  .field
+    = f.label :address_city
+    = f.text_field :address_city
+  .field
+    = f.label :address_state
+    = f.text_field :address_state
+  .field
+    = f.label :address_zip
+    = f.text_field :address_zip
+  .field
+    = f.label :account
+    = f.text_field :account
+  .actions
+    = f.submit 'Save'

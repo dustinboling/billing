@@ -1,0 +1,27 @@
+%p#notice= notice
+
+%p
+  %b Stripe:
+  = @plan.stripe_id
+%p
+  %b Name:
+  = @plan.name
+%p
+  %b Description:
+  = @plan.description
+%p
+  %b Amount:
+  = @plan.amount
+%p
+  %b Interval:
+  = @plan.interval
+%p
+  %b Interval count:
+  = @plan.interval_count
+%p
+  %b Trial period days:
+  = @plan.trial_period_days
+
+= link_to 'Edit', edit_plan_path(@plan)
+\|
+= link_to 'Back', plans_path

@@ -1,0 +1,45 @@
+%p#notice= notice
+
+%p
+  %b Stripe:
+  = @card.stripe_id
+%p
+  %b Last4:
+  = @card.last4
+%p
+  %b Type:
+  = @card.type
+%p
+  %b Exp month:
+  = @card.exp_month
+%p
+  %b Exp year:
+  = @card.exp_year
+%p
+  %b Fingerprint:
+  = @card.fingerprint
+%p
+  %b Name:
+  = @card.name
+%p
+  %b Address line1:
+  = @card.address_line1
+%p
+  %b Address line2:
+  = @card.address_line2
+%p
+  %b Address city:
+  = @card.address_city
+%p
+  %b Address state:
+  = @card.address_state
+%p
+  %b Address zip:
+  = @card.address_zip
+%p
+  %b Account:
+  = @card.account
+
+= link_to 'Edit', edit_card_path(@card)
+\|
+= link_to 'Back', cards_path

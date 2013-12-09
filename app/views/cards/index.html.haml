@@ -1,0 +1,43 @@
+%h1 Listing cards
+
+%table
+  %tr
+    %th Stripe
+    %th Last4
+    %th Type
+    %th Exp month
+    %th Exp year
+    %th Fingerprint
+    %th Name
+    %th Address line1
+    %th Address line2
+    %th Address city
+    %th Address state
+    %th Address zip
+    %th Account
+    %th
+    %th
+    %th
+
+  - @cards.each do |card|
+    %tr
+      %td= card.stripe_id
+      %td= card.last4
+      %td= card.type
+      %td= card.exp_month
+      %td= card.exp_year
+      %td= card.fingerprint
+      %td= card.name
+      %td= card.address_line1
+      %td= card.address_line2
+      %td= card.address_city
+      %td= card.address_state
+      %td= card.address_zip
+      %td= card.account
+      %td= link_to 'Show', card
+      %td= link_to 'Edit', edit_card_path(card)
+      %td= link_to 'Destroy', card, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Card', new_card_path

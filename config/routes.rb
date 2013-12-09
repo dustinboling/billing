@@ -1,4 +1,8 @@
 Billing::Application.routes.draw do
+  resources :plans
+
+  resources :cards
+
   resources :accounts
 
   get "pages/dashboard"
