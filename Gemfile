@@ -40,6 +40,9 @@ gem 'jbuilder', '~> 1.2'
 # Use Devise for authentication
 gem 'devise'
 
+# Stripe payment framework
+gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
+
 group :development, :test do
 	gem 'rspec-rails'
 end
