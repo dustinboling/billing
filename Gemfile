@@ -19,6 +19,9 @@ gem 'modernizr-rails'
 # Use Gumby framework for UI
 gem 'gumby-framework'
 
+# Provides a helper for using Google Webfonts
+gem 'google-webfonts'
+
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 
@@ -40,8 +43,15 @@ gem 'jbuilder', '~> 1.2'
 # Use Devise for authentication
 gem 'devise'
 
+# Use cancan for authorization
+gem "cancan", "~> 1.6.10"
+
 # Stripe payment framework
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
+gem "stripe_event", "~> 0.6.1"
+
+# Simple, efficient background processing
+gem 'sidekiq'
 
 group :development, :test do
 	gem 'rspec-rails'
