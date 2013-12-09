@@ -1,4 +1,6 @@
 Billing::Application.routes.draw do
+  resources :accounts
+
   get "pages/dashboard"
   get "pages/help"
   devise_for :users
